@@ -17,13 +17,17 @@ user = api.me()
 search ='#python'
 numTweets = 500
 # print(user.favourites_count)
+
 for tweet in tweepy.Cursor(api.search,search).items(numTweets):
     try:
-        print('Tweet liked')
+        # print('Tweet liked')
         tweet.favorite()
 
+        #print('tweet retweeted')
         tweet.retweet()
+
         time.sleep(10)
+        
     except tweepy.TweepError as e:
         print(e.reason)
     except StopAsyncIteration:
