@@ -14,19 +14,19 @@ api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
 user = api.me()
 
-search ='#python'
-numTweets = 500
+search =["#python","#ML","#Data Science","#AI"]   # search tag
+numTweets = 500   #rate limit
 # print(user.favourites_count)
 
-for tweet in tweepy.Cursor(api.search,search).items(numTweets):
+for tweet in tweepy.Cursor(api.search,search,lang="en").items(numTweets):
     try:
-        # print('Tweet liked')
+        print('Tweet liked')
         tweet.favorite()
 
-        #print('tweet retweeted')
+        print('tweet retweeted')
         tweet.retweet()
 
-        time.sleep(10)
+        time.sleep(60*10) #sleep for 10 minutes
         
     except tweepy.TweepError as e:
         print(e.reason)
