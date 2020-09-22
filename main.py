@@ -16,7 +16,7 @@ user = api.me()
 
 search =["#python","#ML","#Data Science","#AI"]   # search tag
 numTweets = 500   #rate limit
-# print(user.favourites_count)
+
 
 for tweet in tweepy.Cursor(api.search,search,lang="en").items(numTweets):
     try:
