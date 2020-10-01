@@ -14,7 +14,8 @@ api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
 user = api.me()
 
-search =["#python","#ML","#Data Science","#AI"]   # search tag
+#search =["#python","#ML","#Data Science","#AI"]   # search tag
+search = "#python"
 numTweets = 500   #rate limit
 
 
