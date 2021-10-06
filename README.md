@@ -5,6 +5,6 @@ Bot is deployed on Heroku.
 ### File Description
 ***Procfile*** : worker or the program we want to run    
 ***requirements.txt*** : list of python libraries used in the program    
-***runtime.txt*** : python version     
+***runtime.txt*** : python Version 
 
 
